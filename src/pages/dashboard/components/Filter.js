@@ -11,7 +11,7 @@ export default class Filter extends Component {
     super(props)
     this.FILTER_CONFIG = {
       order: ['Ascending', 'Descending'],
-      department: ['Men', 'Women'],
+      department: ['Men', 'Women', 'Children'],
       price: ['Less Than $29', '$29 - $39', '$39 - $49', '$49 - $89', 'Greater Than $89']
     }
     this.initialState = {}

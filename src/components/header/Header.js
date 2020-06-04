@@ -3,7 +3,7 @@ import styles from './stylesheets/header.module.sass'
 import UserHeader from './components/UserHeader'
 import Menu from './components/Menu'
 import Search from './components/Search'
-import jumpTo,{go} from '../../modules/Navigation'
+import jumpTo, { go } from '../../modules/Navigation'
 import Auth from '../../modules/Auth'
 import device, { size } from '../../modules/mediaQuery'
 import MediaQuery from 'react-responsive'
@@ -68,7 +68,7 @@ export default class Header extends Component {
                   jumpTo('/dashboard')
                 }}
               >
-                Zack Market
+                [+]
               </div>
             </div>
             <div className={styles.mid}>
@@ -158,7 +158,7 @@ export default class Header extends Component {
                 jumpTo('/dashboard')
               }}
             >
-              Zack Market
+              [+]
             </div>
           </div>
         </MediaQuery>

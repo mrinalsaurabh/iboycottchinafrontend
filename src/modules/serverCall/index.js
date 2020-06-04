@@ -4,8 +4,8 @@ import axios from 'axios'
 import qs from 'qs'
 import paypalConfig from '../../configs/paypalConfig'
 
-const URL = 'https://zack-ecommerce-nodejs.herokuapp.com'
-// const URL = 'http://localhost:4000'
+// const URL = 'https://zack-ecommerce-nodejs.herokuapp.com'
+const URL = 'http://localhost:3000'
 
 const serverCall = (config) => {
   //header authorization
@@ -27,7 +27,7 @@ const serverCall = (config) => {
           status: 500
         }
       }
-      if(error.response.status===401){
+      if (error.response.status === 401) {
         Auth.logout()
         jumpTo('/login')
         throw error
