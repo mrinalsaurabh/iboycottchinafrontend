@@ -5,6 +5,9 @@ import {
   GET_PRODUCT_BEGIN,
   GET_PRODUCT_SUCCESS,
   GET_PRODUCT_FAIL,
+  GET_ALTERNATE_BEGIN,
+  GET_ALTERNATE_SUCCESS,
+  GET_ALTERNATE_FAIL,
   GET_PRODUCTS_BY_CATEGORY_BEGIN,
   GET_PRODUCTS_BY_CATEGORY_SUCCESS,
   GET_PRODUCTS_BY_CATEGORY_FAIL,
@@ -19,6 +22,7 @@ import {
 const initialState = {
   products: null,
   product: null,
+  alternate: null,
   loading: false,
   error: null,
 }
@@ -43,7 +47,25 @@ export default (state = initialState, action) => {
         loading: false,
         error: action.payload.error.response.data
       }
+    case GET_ALTERNATE_BEGIN:
+      return {
+        ...state,
+        loading: false,
+        error: null
+      }
     case GET_PRODUCT_BEGIN:
+      return {
+        ...state,
+        loading: false,
+        error: null
+      }
+    case GET_ALTERNATE_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        alternate: action.payload.data.alternate
+      }
+    case GET_ALTERNATE_FAIL:
       return {
         ...state,
         loading: true,

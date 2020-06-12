@@ -1,17 +1,19 @@
 import { connect } from 'react-redux'
 import ProductOverview from './ProductOverview'
-import {getProduct} from '../../redux/action/productAction'
-import {getVariantsByProductId} from '../../redux/action/variantsAction'
-import {postCart} from '../../redux/action/cartAction'
+import { getProduct, getAlternates } from '../../redux/action/productAction'
+import { postCart } from '../../redux/action/cartAction'
 
-const mapStoreToProps=state=>({
-  product:state.product.product,
-  variants:state.variant.variants
-})
-const mapDispatchToProps={
+const mapStoreToProps = function (state) {
+  return {
+    product: state.product.product,
+    alternate: state.product.alternate
+  }
+}
+
+const mapDispatchToProps = {
   getProduct,
-  getVariantsByProductId,
+  getAlternates,
   postCart
 }
 
-export default connect(mapStoreToProps,mapDispatchToProps)(ProductOverview)
+export default connect(mapStoreToProps, mapDispatchToProps)(ProductOverview)
