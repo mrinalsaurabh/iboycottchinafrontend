@@ -7,7 +7,6 @@ export default function Product({ title, color, price, image }) {
     <Card
       border="primary"
       className={`${styles.card} p-2`}
-      style={{ height: '100%' }}
     >
       <Card.Img className={styles.image} variant="top" src={image} />
       <Card.Body>

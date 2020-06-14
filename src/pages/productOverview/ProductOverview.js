@@ -31,16 +31,15 @@ export default class ProductOverview extends Component {
         {this.props.product &&
           <div className={styles.content_box}>
             <div className={styles.content}>
-              {/* left image */}
-              <div className={styles.image}>
-                <img src={this.state.pic || this.props.product.imagePath} alt="" />
-              </div>
               {/* right content box */}
               <div className={styles.context_outbox}>
                 <div className={styles.context}>
                   {/* top descriptions */}
                   <div className={styles.title}>
                     {this.props.product.title}
+                  </div>
+                  <div className={styles.image}>
+                    <img crossOrigin="" className={styles.imagecomp} src={this.state.pic || this.props.product.imagePath} alt="" />
                   </div>
                   <div className={styles.description}>
                     {this.props.product.description}

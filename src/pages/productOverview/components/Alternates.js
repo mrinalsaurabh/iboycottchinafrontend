@@ -22,13 +22,20 @@ export default class Alternates extends Component {
             <div className={styles.title}>
               {alternate.title}
             </div>
-            <div className={styles.title}>
-            </div>
-            <div className={styles.title}>
-              {alternate.source}
-            </div>
             <div className={styles.color_pic}>
-              <img src={alternate.imagePath} alt="" />
+              <img crossOrigin="" className={styles.imagecomp} src={alternate.imagePath} alt="" />
+            </div>
+            <div className={styles.description}>
+              {alternate.description}
+            </div>
+            <div className={styles.price}>
+              ${alternate.price}
+            </div>
+            <div className={styles.source_heading}>
+              Source
+            </div>
+            <div className={styles.source}>
+              {alternate.source}
             </div>
           </div>
         )}
