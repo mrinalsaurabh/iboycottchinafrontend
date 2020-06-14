@@ -160,6 +160,9 @@ export default class Header extends Component {
             >
               [+]
             </div>
+            <div className={styles.headtext}>
+              I boycott China
+            </div>
           </div>
         </MediaQuery>
       </div >

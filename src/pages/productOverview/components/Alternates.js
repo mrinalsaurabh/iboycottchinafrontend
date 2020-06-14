@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import styles from '../stylesheets/variants.module.sass'
+import styles from '../stylesheets/alternates.module.sass'
 
 
 export default class Alternates extends Component {
@@ -9,12 +9,15 @@ export default class Alternates extends Component {
     this.state = {
     }
   }
-  
+
   render() {
     return (
-      <div className={styles.context_outbox}>
+      <div className={styles.alternate_outbox}>
+        <div className={styles.alternate_title}>
+          Alternates
+        </div>
         {this.props.alternates && this.props.alternates.map(alternate =>
-          <div className={styles.context}>
+          <div className={styles.alternate}>
             {/* top descriptions */}
             <div className={styles.title}>
               {alternate.title}
@@ -25,9 +28,7 @@ export default class Alternates extends Component {
               {alternate.source}
             </div>
             <div className={styles.color_pic}>
-
               <img src={alternate.imagePath} alt="" />
-
             </div>
           </div>
         )}
