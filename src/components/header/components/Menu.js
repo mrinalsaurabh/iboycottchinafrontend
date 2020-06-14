@@ -19,7 +19,7 @@ export default function Menu({
             <DropList
               clickCategory={(c) => getProductsByCategory(c)}
               department={d.departmentName}
-              categories={d.categories.split(',')}
+              categories={d.categories}
             />
           </div>
         )}
