@@ -29,7 +29,7 @@ export default class Alternates extends Component {
               {alternate.description}
             </div>
             <div className={styles.price}>
-              ${alternate.price}
+              ₹{alternate.price}
             </div>
             <div className={styles.source_heading}>
               Source
